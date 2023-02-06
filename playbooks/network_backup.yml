@@ -60,7 +60,7 @@
       delegate_facts: true
 
     - name: create restore job template
-      ansible.builtin.template:
+      template:
         name: "Network Automation - Restore"
         job_type: "run"
         inventory: "{{ restore_inventory|default('Network Inventory') }}"
